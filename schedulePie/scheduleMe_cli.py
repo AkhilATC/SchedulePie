@@ -35,10 +35,11 @@ def scedule_me_init():
 				hour = click.prompt(click.style('Hour', fg='blue'), type=str)
 				Month_day = click.prompt(click.style('Month day', fg='blue'), type=str)
 				Month = click.prompt(click.style('Month', fg='blue'), type=str)
+				week = click.prompt(click.style('Week', fg='blue'), type=str)
 				JOB = click.prompt(click.style('Job', fg='blue'), type=str)
-				job_cmd = f"crontab -l 2>/dev/null| cat - <(echo \" {minute} {hour} {Month_day} {Month} {JOB} \") | crontab -"
+				job_cmd = f"crontab -l 2>/dev/null| cat - <(echo \" {minute} {hour} {Month_day} {Month} {week} {JOB} \") | crontab -"
 				print('Do you want create following cron job, if yes please press [Y] else [N]')
-				click.echo(click.style(job_cmd, fg='green'))
+				click.echo(click.style(f"Conform your job: {minute} {hour} {Month_day} {Month} {week} {JOB}", fg='green'))
 				var_ = click.prompt('Please type your action', type=str)
 				if var_ == 'Y':
 					out, msg = sheduler.execute_cmds(job_cmd)
@@ -72,7 +73,6 @@ def scedule_me_init():
 			else:
 				click.echo(click.style('You select a wrong option', fg='blue'))
 	click.echo(click.style('OK GoodBye', fg='yellow'))
-
 
 if __name__ == '__main__':
 	scedule_me_init()

@@ -1,7 +1,6 @@
 # ScedulePie 🥧
 
-A Cron Job is a feature that allows you to create a task that you would like it to run automatically on your Joomla Instance through the server. Through a Cron Job, you can specify exactly what you'd like to accomplish. In our proposed system try to connect a remote machine via SSH and manage cron jobs. SchedulePie is CLI tool that allow to connect remote machine via SSH.
-
+A Cron Job is a feature that allows you to create a task that you would like it to run automatically on your Joomla Instance through the server. Through a Cron Job, you can specify exactly what you'd like to accomplish. In our proposed system (SchedulePie) try to connect a remote machine via SSH and manage cron jobs. 
 ## Installation 
 
 ```buildoutcfg
